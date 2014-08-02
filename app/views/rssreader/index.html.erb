@@ -1,0 +1,17 @@
+
+
+<h1>RSS FEED - POST</h1>
+<% if(@feedentry.empty?)%>
+	<span class="content"><h1>NO RSS FEED FOUND!</h1></span>
+<%end%>
+<% @feedentry.each do |feedentry| %>
+<li>
+	<span class="content"><a href="<%= feedentry.link%>" target="_blank"><%= feedentry.title %></a></span>
+	<span class="timestamp"><%= feedentry.publish_at.to_s[0..(feedentry.publish_at.to_s.length-4)]%></span>
+ 	
+
+</li>
+
+<% end %>
+
+<%= will_paginate @feedentry %>

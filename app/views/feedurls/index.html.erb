@@ -1,0 +1,20 @@
+
+<h1>RSS FEED</h1>
+<% @feedurls.each do |feedurl| %>
+<li>
+	<span class="content"><%= feedurl.feed_title %></span>
+	<span class="timestamp">Feed URL:</span>
+ 	<%= link_to 'Show', feedurl %>
+    <%= link_to 'Edit', edit_feedurl_path(feedurl) %>
+    <%= link_to 'Delete', feedurl, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+</li>
+<% end %>
+</br>
+<!--<%= link_to "New",   new_feedurl_path, :class => "btn btn-large btn-primary" %>-->
+
+<%= button_to "New", new_feedurl_path, :class => "btn btn-large btn-primary", :method => "get" %>
+	
+	
+   
+

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  feed_title: MyString
+  feed_url: MyString
+
+two:
+  feed_title: MyString
+  feed_url: MyString
