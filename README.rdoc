@@ -4,7 +4,7 @@ Simple RSS reader
 
 If you are using Google reader, or any RSS reader, then you must be familiar what RSS readers generally do.
 
-For the sake of assignment purpose, please create a very basic RSS-reader do following tasks:
+Very basic RSS-reader do following tasks:
 
     Interface to add/remove/edit Feed URLS.
     List all feeds. Fetch RSS feed titles automatically.
