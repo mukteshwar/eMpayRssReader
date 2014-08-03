@@ -14,7 +14,7 @@ class Feedentry < ActiveRecord::Base
     thread = Thread.new do
       loop do
         logger.info "UPDATE-FEED-2"
-        sleep 2.minutes
+        sleep 5.minutes
         #sleep 10
         feedurls = Feedurl.all
         feedurls.each do |feedurl|
