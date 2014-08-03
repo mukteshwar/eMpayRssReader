@@ -5,7 +5,7 @@ class Feedentry < ActiveRecord::Base
   
   
   def self.update_feeds()
-     logger.debug "UPDATE-FEED-1"
+     logger.info "UPDATE-FEED-1"
     return if(!$UPDATE_FEED)
 
     $UPDATE_FEED=false
@@ -13,8 +13,8 @@ class Feedentry < ActiveRecord::Base
     #############################################
     thread = Thread.new do
       loop do
-        logger.debug "UPDATE-FEED-2"
-        sleep 15.minute
+        logger.info "UPDATE-FEED-2"
+        sleep 2.minutes
         #sleep 10
         feedurls = Feedurl.all
         feedurls.each do |feedurl|
@@ -37,10 +37,10 @@ class Feedentry < ActiveRecord::Base
                 feedentry.feedurl_id = feedurl.id
 
                 if(feedentry.save)
-                  logger.debug "NEW FEEDENTRY SAVED!"
+                  logger.info "NEW FEEDENTRY SAVED!"
                 end
               else
-                logger.debug "FEED ALREADY AVAILABLE: #{title}"
+                logger.info "FEED ALREADY AVAILABLE: #{title}"
 
               end
 
