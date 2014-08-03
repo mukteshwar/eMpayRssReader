@@ -40,7 +40,7 @@ class Feedentry < ActiveRecord::Base
                   logger.info "NEW FEEDENTRY SAVED!"
                 end
               else
-                logger.info "FEED ALREADY AVAILABLE: #{title}"
+                logger.debug "FEED ALREADY AVAILABLE: #{title}"
 
               end
 
